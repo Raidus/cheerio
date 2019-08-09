@@ -1,5 +1,11 @@
 <h1 align="center">cheerio</h1>
 
+<h2>MODIFIED</h2>
+1. Updated htmlparser2 
+2. Removed parse5 module (around 50% of total bundle size)
+3. Browserified and minified: `npm run bundle` (browserify and terser required) => now only 185KB
+4. Improved load performance: 2x-5x faster vs. parse5
+
 <h5 align="center">Fast, flexible & lean implementation of core jQuery designed specifically for the server.</h5>
 
 <div align="center">

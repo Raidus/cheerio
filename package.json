@@ -26,12 +26,10 @@
   },
   "dependencies": {
     "css-select": "~2.0.0",
-    "dom-serializer": "~0.1.1",
+    "dom-serializer": "~0.2.1",
     "entities": "~1.1.1",
-    "htmlparser2": "^3.9.1",
-    "lodash": "^4.17.11",
-    "parse5": "^5.1.0",
-    "parse5-htmlparser2-tree-adapter": "^5.1.0"
+    "htmlparser2": "^4.0.0",
+    "lodash": "^4.17.11"
   },
   "devDependencies": {
     "benchmark": "^2.1.0",
@@ -54,7 +52,8 @@
     "test": "npm run test:lint && npm run test:mocha",
     "test:mocha": "mocha --recursive --reporter dot",
     "test:lint": "eslint --ignore-pattern docs --ignore-path .gitignore .",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "build": "browserify index.js -s cheerio | terser --compress --mangle > dist/index.js"
   },
   "prettier": {
     "singleQuote": true
